@@ -1,0 +1,72 @@
+<div class="container-fluid">
+  <button class="btn btn-warning btn-block mt-3 ms-3" routerLink="/users-list">Back</button>
+  <div *ngIf="currentUser.dni" class="row justify-content-center mt-5">
+    <div class="col-md-4">
+      <h2 class="">Update User</h2>
+      <div *ngIf="message!=''"  class="alert alert-success" role="alert">
+        <strong>{{ message }}</strong>
+      </div>
+      <form>
+
+        <div class="form-group">
+          <label for="dni">Dni</label>
+          <input type="text" class="form-control" disabled id="dni" [(ngModel)]="currentUser.dni" name="dni" />
+        </div>
+
+        <div class="form-group">
+          <label for="full_name">Full Name</label>
+          <input type="text" class="form-control" id="full_name" [(ngModel)]="currentUser.full_name" name="full_name" />
+        </div>
+
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="text" class="form-control" id="age" [(ngModel)]="currentUser.age" name="age" />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="text" class="form-control" id="description" [(ngModel)]="currentUser.phone" name="phone" />
+        </div>
+        <div class="form-group">
+          <button class="btn btn-success btn-block mt-3" (click)="updateUser()" type="submit">Update</button>
+        </div>
+        
+
+      </form>
+     
+     
+      <div *ngIf="!currentUser.dni">
+        <br />
+        <p>Cannot access this User...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <div>
+  <div *ngIf="currentUser.dni" class="edit-form">
+    <h4>Tutorial</h4>
+    <form>
+      <div class="form-group">
+        <label for="full_name">full_name</label>
+        <input type="text" class="form-control" id="full_name" [(ngModel)]="currentUser.full_name" name="full_name" />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" class="form-control" id="description" [(ngModel)]="currentUser.phone" name="phone" />
+      </div>
+
+    </form>
+
+
+    <button type="submit" class="badge badge-success mb-2" (click)="updateUser()">
+      Update
+    </button>
+    <p>{{ message }}</p>
+  </div>
+  <div *ngIf="!currentUser.dni">
+    <br />
+    <p>Cannot access this Tutorial...</p>
+  </div>
+</div> -->

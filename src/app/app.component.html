@@ -1,0 +1,28 @@
+<!-- El header de la aplicacion  -->
+<nav class="navbar navbar-light navbar-expand-lg bg-light">
+  <div class="container-fluid collapse navbar-collapse">
+    <span class="navbar-brand mb-0 h1">OUTMANE BOUHOU <br> <h4>Crud Angular</h4></span>
+    <ul class="navbar-nav ml-auto fw-bold">
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="/users-list">Show Users</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " routerLinkActive="active" routerLink="/add-user">Add User</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+
+<!-- El main de la apliacion , los datos de usuario , insercion y modificacion de user  -->
+<router-outlet></router-outlet>
+
+<!-- El footer de el author de la aplicaion  -->
+<footer class="bg-light text-center fixed-bottom">
+  
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 Copyright OUTMANE BOUHOU
+  </div>
+  <!-- Copyright -->
+</footer>

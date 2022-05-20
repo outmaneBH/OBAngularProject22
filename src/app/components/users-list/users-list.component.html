@@ -1,0 +1,32 @@
+
+<div class="container">
+
+  <h2 class="m-2">User Maintenance</h2>
+  
+  <button class="btn  btn btn-outline-success mt-4 mb-2" routerLink="/add-user"> Add new User</button>
+  <table class="table fs-6 table-hover">
+    <thead>
+      <tr>
+        <!-- <th scope="col">Id</th> -->
+        <th scope="col">DNI</th>
+        <th scope="col">Full Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of Users; let i = index">
+        <!-- <th scope="row">{{user.id}}</th> -->
+        <td>{{user.dni}}</td>
+        <td>{{user.full_name}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.phone}}</td>
+        <td class="text-center">
+          <button class="btn btn-sm  btn-outline-primary" routerLink="/edit-user/{{user.dni}}">Edit</button>
+          <button class="btn btn-sm btn-outline-danger m-1 ms-4" routerLink="/delete-user/{{user.dni}}">Delete</button>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
